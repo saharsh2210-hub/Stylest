@@ -3,8 +3,8 @@ services:
     name: fitcheck
     runtime: docker
     plan: free
-    dockerfilePath: ./Stylest/FITCHECK/Dockerfile
-    dockerContext: ./Stylest/FITCHECK
+    dockerfilePath: ./FITCHECK/Dockerfile
+    dockerContext: ./FITCHECK
     healthCheckPath: /health
     autoDeploy: true
     envVars:
