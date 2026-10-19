@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fitcheck
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: FITCHECK_APP_PASSWORD
+        sync: false
+      - key: FITCHECK_SESSION_SECRET
+        generateValue: true
